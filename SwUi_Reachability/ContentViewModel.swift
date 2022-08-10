@@ -26,7 +26,6 @@ class ContentViewModel: ObservableObject {
     }
     
     @objc func reachabilityChanged(notification: Notification) {
-        print("🏀 notification received")
         let isConnected = notification.userInfo?["isConnected"] as! Bool
         if isConnected {
             DispatchQueue.main.async {
@@ -38,16 +37,8 @@ class ContentViewModel: ObservableObject {
             }
         }
     }
+
     func internetConnection() {
         Reachability.standard.internetConnection()
     }
-    
-//    func checkConnection()  {
-//        print("\(Reachability.standard.monitor.currentPath)")
-//        if Reachability.standard.isConnected {
-//            self.uiState = .connected
-//        } else {
-//            self.uiState = .disconnected
-//        }
-//    }
 }
