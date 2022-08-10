@@ -12,7 +12,6 @@ class Reachability: ObservableObject {
     static let standard = Reachability()
     let monitor = NWPathMonitor()
     let notification = NotificationCenter.default
-    @Published var isConnected = false
     
     class var shared: Reachability {
         return standard
