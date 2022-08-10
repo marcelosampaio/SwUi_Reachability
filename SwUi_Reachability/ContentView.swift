@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel: ContentViewModel
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Group {
+            switch viewModel.uiState {
+            case .connected:
+                Text("👍 Connected to the internet")
+            case .disconnected:
+                Text("❌ Disconnected")
+            }
+        }
+        .task {
+            viewModel.internetConnection()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: ContentViewModel())
     }
 }
