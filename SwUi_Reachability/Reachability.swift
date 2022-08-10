@@ -30,7 +30,7 @@ class Reachability: ObservableObject {
         }
     }
 
-    func internetConnection() {
+    func startMonitoring() {
         let queue = DispatchQueue(label: "Monitor")
         monitor.start(queue: queue)
     }

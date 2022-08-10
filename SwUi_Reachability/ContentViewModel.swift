@@ -14,9 +14,8 @@ class ContentViewModel: ObservableObject {
     init() {
         observers()
         internetConnection()
-
     }
-    
+
     deinit {
         notificationCenter.removeObserver(Notification.Name("reachabilityChanged"))
     }
@@ -39,6 +38,6 @@ class ContentViewModel: ObservableObject {
     }
 
     func internetConnection() {
-        Reachability.standard.internetConnection()
+        Reachability.standard.startMonitoring()
     }
 }
