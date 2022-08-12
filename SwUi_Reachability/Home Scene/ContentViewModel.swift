@@ -41,3 +41,16 @@ class ContentViewModel: ObservableObject {
         Reachability.standard.startMonitoring()
     }
 }
+
+
+extension ContentViewModel {
+    func detailView() -> some View {
+        return DetailView(viewModel: DetailViewModel())
+    }
+}
+
+extension ContentViewModel {
+    func showDetail() {
+        self.uiState = .detail
+    }
+}

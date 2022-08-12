@@ -14,9 +14,18 @@ struct ContentView: View {
         Group {
             switch viewModel.uiState {
             case .connected:
-                Text("👍 Connected to the internet")
+                VStack {
+                    Text("👍 Connected to the internet")
+                    Button("Go to detail view") {
+                        viewModel.showDetail()
+                    }
+                }
+                
+                
             case .disconnected:
                 Text("❌ Disconnected")
+            case .detail:
+                viewModel.detailView()
             }
         }
         .task {

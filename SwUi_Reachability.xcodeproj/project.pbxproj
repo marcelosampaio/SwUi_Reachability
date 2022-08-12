@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2C73F328A57036009DAA35 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2C73F228A57036009DAA35 /* DetailView.swift */; };
+		2D2C73F528A5708D009DAA35 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2C73F428A5708D009DAA35 /* DetailViewModel.swift */; };
+		2D2C73F728A5709B009DAA35 /* DetailUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2C73F628A5709B009DAA35 /* DetailUIState.swift */; };
 		2D9203BC28A3D36100D84AE7 /* SwUi_ReachabilityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9203BB28A3D36100D84AE7 /* SwUi_ReachabilityApp.swift */; };
 		2D9203BE28A3D36100D84AE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9203BD28A3D36100D84AE7 /* ContentView.swift */; };
 		2D9203C028A3D36300D84AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9203BF28A3D36300D84AE7 /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2C73F228A57036009DAA35 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2D2C73F428A5708D009DAA35 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		2D2C73F628A5709B009DAA35 /* DetailUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUIState.swift; sourceTree = "<group>"; };
 		2D9203B828A3D36100D84AE7 /* SwUi_Reachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwUi_Reachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9203BB28A3D36100D84AE7 /* SwUi_ReachabilityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwUi_ReachabilityApp.swift; sourceTree = "<group>"; };
 		2D9203BD28A3D36100D84AE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +44,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D2C73EF28A56E49009DAA35 /* Home Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2D9203BD28A3D36100D84AE7 /* ContentView.swift */,
+				2D9203CC28A3E45900D84AE7 /* ContentViewModel.swift */,
+				2D9203CE28A3E48800D84AE7 /* ContentUIState.swift */,
+			);
+			path = "Home Scene";
+			sourceTree = "<group>";
+		};
+		2D2C73F028A56E6F009DAA35 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				2D9203D028A418E900D84AE7 /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		2D2C73F128A57015009DAA35 /* Deetail Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2D2C73F228A57036009DAA35 /* DetailView.swift */,
+				2D2C73F428A5708D009DAA35 /* DetailViewModel.swift */,
+				2D2C73F628A5709B009DAA35 /* DetailUIState.swift */,
+			);
+			path = "Deetail Scene";
+			sourceTree = "<group>";
+		};
 		2D9203AF28A3D36100D84AE7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				2D9203BB28A3D36100D84AE7 /* SwUi_ReachabilityApp.swift */,
-				2D9203BD28A3D36100D84AE7 /* ContentView.swift */,
-				2D9203CC28A3E45900D84AE7 /* ContentViewModel.swift */,
-				2D9203CE28A3E48800D84AE7 /* ContentUIState.swift */,
-				2D9203D028A418E900D84AE7 /* Reachability.swift */,
+				2D2C73F028A56E6F009DAA35 /* Reachability */,
+				2D2C73EF28A56E49009DAA35 /* Home Scene */,
+				2D2C73F128A57015009DAA35 /* Deetail Scene */,
 				2D9203BF28A3D36300D84AE7 /* Assets.xcassets */,
 				2D9203C128A3D36300D84AE7 /* Preview Content */,
 			);
@@ -150,7 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D2C73F728A5709B009DAA35 /* DetailUIState.swift in Sources */,
 				2D9203BE28A3D36100D84AE7 /* ContentView.swift in Sources */,
+				2D2C73F328A57036009DAA35 /* DetailView.swift in Sources */,
+				2D2C73F528A5708D009DAA35 /* DetailViewModel.swift in Sources */,
 				2D9203CF28A3E48800D84AE7 /* ContentUIState.swift in Sources */,
 				2D9203BC28A3D36100D84AE7 /* SwUi_ReachabilityApp.swift in Sources */,
 				2D9203D128A418E900D84AE7 /* Reachability.swift in Sources */,

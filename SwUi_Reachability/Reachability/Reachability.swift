@@ -16,15 +16,17 @@ class Reachability: ObservableObject {
     class var shared: Reachability {
         return standard
     }
-    
+
     private init() {
         self.monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
                 print("👍 connected to the internet")
-                self.notification.post(name: Notification.Name("reachabilityChanged"), object: nil, userInfo: ["isConnected":true])
+                self.notification.post(name: Notification.Name("reachabilityChanged"),
+                                       object: nil,
+                                       userInfo: ["isConnected": true])
             } else {
                 print("❌ No internet connection")
-                self.notification.post(name: Notification.Name("reachabilityChanged"), object: nil, userInfo: ["isConnected":false])
+                self.notification.post(name: Notification.Name("reachabilityChanged"), object: nil, userInfo: ["isConnected": false])
             }
         }
     }
