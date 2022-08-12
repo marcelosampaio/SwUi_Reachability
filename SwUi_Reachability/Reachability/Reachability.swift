@@ -8,11 +8,17 @@
 import SwiftUI
 import Network
 
+struct Constants {
+    static let reachabilityChanged = "reachabilityChanged"
+    static let connected = "isConnected"
+}
+
 class Reachability: ObservableObject {
     static let standard = Reachability()
+    var isActive = false
     let monitor = NWPathMonitor()
     let notification = NotificationCenter.default
-    
+
     class var shared: Reachability {
         return standard
     }
@@ -21,12 +27,12 @@ class Reachability: ObservableObject {
         self.monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
                 print("👍 connected to the internet")
-                self.notification.post(name: Notification.Name("reachabilityChanged"),
+                self.notification.post(name: Notification.Name(Constants.reachabilityChanged),
                                        object: nil,
-                                       userInfo: ["isConnected": true])
+                                       userInfo: [Constants.connected: true])
             } else {
                 print("❌ No internet connection")
-                self.notification.post(name: Notification.Name("reachabilityChanged"), object: nil, userInfo: ["isConnected": false])
+                self.notification.post(name: Notification.Name(Constants.reachabilityChanged), object: nil, userInfo: ["isConnected": false])
             }
         }
     }

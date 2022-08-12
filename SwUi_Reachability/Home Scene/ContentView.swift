@@ -20,16 +20,11 @@ struct ContentView: View {
                         viewModel.showDetail()
                     }
                 }
-                
-                
             case .disconnected:
                 Text("❌ Disconnected")
             case .detail:
                 viewModel.detailView()
             }
-        }
-        .task {
-            viewModel.internetConnection()
         }
     }
 }
